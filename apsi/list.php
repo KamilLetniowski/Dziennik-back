@@ -15,15 +15,16 @@ if($result = mysqli_query($con,$sql))
     {
      ?><a href="course_pupil_list.php?id=<?php echo $row['id']?>">
         <?php
-       echo $cars[$cr]['model'] = $row['leader'];
-       echo $cars[$cr]['price'] = $row['name'];
+       echo $cars[$cr]['leader'] = $row['leader'];
+       echo $cars[$cr]['name'] = $row['name'];
        ?>
         </a><br>
         <?php
-$cr++;
+    $cr++;
     }
+	
 
-//    echo json_encode(['data'=>$cars]);
+   echo json_encode(['data'=>$cars]);
 }
 else
 {

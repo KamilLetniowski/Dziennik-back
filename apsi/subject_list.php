@@ -14,18 +14,13 @@ if($result = mysqli_query($con,$sql))
 
     while($row = mysqli_fetch_assoc($result))
     {
-        ?><a href="subject_date_list.php?name=<?php echo $row['name']?>&leader=<?php echo $row['leader']?>&class_id=<?php echo $row['class_id']?>">
-        <?php
-        echo $cars[$cr]['model'] = $row['name']." ";
-        echo $cars[$cr]['price'] = $row['leader']." ";
-        echo $cars[$cr]['price'] = $row['class_id']." ";
-        ?>
-        </a><br>
-        <?php
+        $cars[$cr]['name'] = $row['name']." ";
+        $cars[$cr]['leader'] = $row['leader']." ";
+        $cars[$cr]['classId'] = $row['class_id']." ";
         $cr++;
     }
 
-//    echo json_encode(['data'=>$cars]);
+    echo json_encode(['data'=>$cars]);
 }
 else
 {
