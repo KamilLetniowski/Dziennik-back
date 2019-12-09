@@ -4,8 +4,8 @@
  */
 require 'connect.php';
 
-$cars = [];
-$sql = "SELECT id, name , leader FROM course";
+$course = [];
+$sql = "SELECT name , leader, id FROM course";
 
 if($result = mysqli_query($con,$sql))
 {
@@ -13,18 +13,13 @@ if($result = mysqli_query($con,$sql))
 
     while($row = mysqli_fetch_assoc($result))
     {
-     ?><a href="course_pupil_list.php?id=<?php echo $row['id']?>">
-        <?php
-       echo $cars[$cr]['leader'] = $row['leader'];
-       echo $cars[$cr]['name'] = $row['name'];
-       ?>
-        </a><br>
-        <?php
+       $course[$cr]['leader'] = $row['leader'];
+       $course[$cr]['name'] = $row['name'];
+       $course[$cr]['id'] = $row['id'];
     $cr++;
     }
-	
 
-   echo json_encode(['data'=>$cars]);
+    echo json_encode(['data'=>$course]);
 }
 else
 {
