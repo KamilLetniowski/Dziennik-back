@@ -6,7 +6,7 @@ require 'connect.php';
 
 $id=$_GET['id'];
 
-$cars = [];
+$coursePupil = [];
 $sql = "SELECT a.pupil, a.course,p.id, p.name AS pupil, p.class_id AS class FROM pupil_course AS a
         INNER JOIN pupils AS p WHERE a.pupil=p.id AND a.course='$id'";
 
@@ -17,10 +17,12 @@ if($result = mysqli_query($con,$sql))
 
     while($row = mysqli_fetch_assoc($result))
     {
-        echo $row['pupil']." ".$row['class']."<br>";
+        $coursePupil[$cr]['name']=$row['pupil'];
+        $coursePupil[$cr]['class']=$row['class'];
+        $cr++;
     }
 
-//    echo json_encode(['data'=>$cars]);
+    echo json_encode(['data'=>$coursePupil]);
 }
 else
 {

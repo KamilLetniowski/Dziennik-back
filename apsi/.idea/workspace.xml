@@ -30,7 +30,7 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../api" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/Dziennik/Dziennik-front" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -68,11 +68,22 @@
       <updated>1574295578233</updated>
       <workItem from="1574295579310" duration="7150000" />
       <workItem from="1574363034769" duration="5036000" />
-      <workItem from="1574641168523" duration="59556000" />
+      <workItem from="1574641168523" duration="132202000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/subject_pupil_list_add.php</url>
+          <line>18</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

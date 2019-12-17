@@ -23,7 +23,7 @@ require 'getPupils.php';
 <br>
 <br>
 
-<form action="subject.add.php" method="post">
+<form action="subject_add.php" method="post">
     Przedmiot<input type="text" name="subject"><br>
     Prowadzący<input type="text" name="leader"><br>
     Data rozpoczęcia<input type="datetime-local" name="date"><br>
@@ -47,7 +47,7 @@ require 'getPupils.php';
     <input type="submit" value="DODAJ KURSA!">
 </form>
 
-<form action="add_pupil_to_course.php" method="post">
+<form action="add_pupil_to_course.php" method="get">
 
     <br>
     <br>
